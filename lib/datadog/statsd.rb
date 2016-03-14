@@ -19,6 +19,8 @@ require 'socket'
 module Datadog
   class Statsd
 
+    VERSION = "1.6.0"
+
     DEFAULT_HOST = '127.0.0.1'
     DEFAULT_PORT = 8125
 
@@ -66,11 +68,6 @@ module Datadog
     class << self
       # Set to a standard logger instance to enable debug logging.
       attr_accessor :logger
-    end
-
-    # Return the current version of the library.
-    def self.VERSION
-      "1.6.0"
     end
 
     # @param [String] host your statsd host
